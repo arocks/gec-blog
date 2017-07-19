@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <title>GEC blog</title>
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bulma/0.4.3/css/bulma.min.css">
+    </head>
+    <body>
+
+        <section class="hero is-info">
+          <div class="hero-body">
+            <div class="container">
+              <h1 class="title">
+                <img src="https://cdn1.iconfinder.com/data/icons/designer-s-tools-1/512/Pen_Tool-128.png" alt="logo">
+                GEC Blog
+              </h1>
+            </div>
+          </div>
+        </section>
+
+        <div class="container">
+            {% for post in posts %}
+                <section class="section">
+                    <h1 class="title is-3"><a href="">{{ post.title }}</a></h1>
+                    <p class="tag is-light">published: {{ post.published_date }}</p>
+                    <p class="content">{{ post.text|linebreaksbr }}</p>
+                </section>
+            {% endfor %}
+        </div>
+        <footer class="footer">
+            <div class="content has-text-centered">
+                The website content is licensed <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC ANS 4.0</a>.
+            </div>
+        </footer>
+    </body>
+</html>
+
