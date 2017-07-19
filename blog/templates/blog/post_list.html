@@ -20,7 +20,7 @@
             {% for post in posts %}
                 <section class="section">
                     <h1 class="title is-3"><a href="">{{ post.title }}</a></h1>
-                    <p class="tag is-light">published: {{ post.published_date }}</p>
+                    <p class="tag is-light">published: {{ post.created_date }}</p>
                     <p class="content">{{ post.text|linebreaksbr }}</p>
                 </section>
             {% endfor %}
